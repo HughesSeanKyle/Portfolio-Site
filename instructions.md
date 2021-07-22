@@ -1,0 +1,3 @@
+- - 21/07/2021
+    - - See if you can add some sort of pattern that goes over square parts of arm to cover up harshness of shape
+    - - Coud possibly make blob in Figma with plugin
