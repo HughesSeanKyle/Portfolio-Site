@@ -109,18 +109,33 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   width: 100vw;
 }
 
-#heroImg {
-  height: 100vh;
-  width: 36vw;
-  float: right;
-}
-
 .hero-section__headings {
   text-align: center;
 }
 
+.hero-section__img-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#heroImg {
+  height: 100vh;
+  width: 36vw;
+  /* float: right; */
+}
+
 .hero-section__blob {
+  align-self: flex-end;
   position: absolute;
+  top: 0;
+  left: 810px;
+  bottom: -360px;
+  right: 0;
+  width: auto; /* to keep proportions */
+  height: auto; /* to keep proportions */
+  max-width: 100%; /* not to stand out from div */
+  max-height: 100%; /* not to stand out from div */
+  margin: auto auto 0; /* position to bottom and center */
 }
 
 /* About Section */
