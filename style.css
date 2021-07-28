@@ -170,6 +170,28 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   }
 }
 
+/* Hero section js classes */
+/* .hero-section__headings > span {
+  color: #ff2d2d;
+} */
+
+.hero-section__headings__h1 > span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.9s ease-in-out;
+}
+
+/* .fade {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+#fade {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* About Section */
 .about-container {
   display: flex;
