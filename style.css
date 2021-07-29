@@ -158,15 +158,31 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   width: 30.6vw;
   position: absolute;
   top: 60px;
-  animation: slide 2.5s normal linear;
+  animation: slideRight 2.5s normal linear;
 }
 
-@keyframes slide {
+@keyframes slideRight {
   from {
     right: -36%;
   }
   to {
     right: 0%;
+  }
+}
+
+.hero-section__headings__h2 {
+  position: absolute;
+  bottom: 21%;
+  left: 12%;
+  animation: slideLeft 3s normal linear;
+}
+
+@keyframes slideLeft {
+  from {
+    left: -45%;
+  }
+  to {
+    left: 12%;
   }
 }
 
