@@ -63,6 +63,7 @@ h2 {
   font-family: Noto Sans JP, sans-serif;
   font-size: 32px;
   font-weight: normal;
+  transition: all 0.9s ease-in-out;
 }
 
 /* Navigation */
@@ -111,6 +112,22 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   margin: 0;
   padding: 0;
 }
+
+.floating {  
+  animation-name: floating;
+  animation-duration: 2.7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  72%  { transform: translate(0, 2.16px); }
+  to   { transform: translate(0, -0px); }    
+}
+
 
 .hero-section {
   /* text-align: center; */
@@ -175,6 +192,7 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   bottom: 21%;
   left: 12%;
   animation: slideLeft 3s normal linear;
+  /* transition: all 0.9s ease-in-out; */
 }
 
 @keyframes slideLeft {

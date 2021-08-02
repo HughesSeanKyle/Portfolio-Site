@@ -59,6 +59,8 @@ if (currentTheme) {
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////
+
 // Hero section animation logic
 // Heading Selectors
 const heading = document.querySelector('.hero-section__headings__h1');
