@@ -155,7 +155,7 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   /* position: absolute; */
   height: 18vh;
   width: 50vw;
-  margin-top: 25vh;
+  margin-top: 18vh;
 }
 
 .hero-section__img-right__container__skills {
@@ -165,10 +165,11 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   list-style-type: none;
 }
 
-.hero-section__img-right__container__skills > li {
+.hero-section__img-right__container__skills > li > img {
   padding: 0 10px;
-  max-width: 15px;
-  max-height: 15px;
+  max-width: 36px;
+  max-height: 36px;
+  filter: drop-shadow(9px 9px 9px var(--primary-color));
 }
 
 .hero-section__img-right {
@@ -183,6 +184,7 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   position: absolute;
   top: 60px;
   animation: slideRight 2.5s normal linear;
+  filter: drop-shadow(-9px -9px 9px var(--primary-color));
 }
 
 @keyframes slideRight {
