@@ -78,6 +78,10 @@ nav {
   background: rgb(255 255 255 / 45%);
 }
 
+nav > a {
+  filter: drop-shadow(9px 9px 9px var(--primary-color));
+}
+
 a {
   margin-right: 25px;
   color: var(--primary-color);
@@ -223,6 +227,10 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   opacity: 0;
   transform: translateY(-100%);
   transition: all 0.9s ease-in-out;
+}
+
+.hero-section__headings__h1 > span:last-child, span:first-child {
+  filter: drop-shadow(9px 9px 9px var(--primary-color));
 }
 
 /* .fade {
@@ -393,6 +401,10 @@ p {
 .theme-switch-wrapper span {
   margin-right: 10px;
   font-size: 1rem;
+}
+
+#toggle-icon > i {
+  filter: drop-shadow(9px 9px 9px var(--primary-color));
 }
 
 .toggle-text {
