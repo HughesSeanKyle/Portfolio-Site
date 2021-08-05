@@ -73,7 +73,7 @@ nav {
   font-family: Lato, sans-serif;
   font-size: 24px;
   letter-spacing: 3px;
-  padding: 25px;
+  padding: 21px;
   width: 100vw;
   background: rgb(255 255 255 / 45%);
 }
@@ -248,11 +248,21 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   display: flex;
 }
 
+.about-container > .image-container > h2 {
+  filter: drop-shadow(0px -9px 5px var(--primary-color));  
+}
+
 .about__heading-container {
   width: 100vw;
   text-align: center;
-  background: black;
+  background: var(--background);
   position: relative;
+  box-shadow: 9px 9px 9px var(--primary-color);
+  border-top: solid var(--secondary-color);
+}
+
+.about__heading {
+  transition: all 0.9s ease-in-out;
 }
 
 #about {
@@ -395,7 +405,7 @@ p {
   z-index: 100;
   position: fixed;
   right: 25px;
-  top: 30px;
+  top: 18px;
 }
 
 .theme-switch-wrapper span {
