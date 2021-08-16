@@ -8,9 +8,9 @@ const textBox = document.getElementById('text-box');
 
 // Dark or Light Images
 function imageMode(color) {
-  image1.src = `img/undraw_proud_coder_${color}.svg`;
+  image1.src = `img/undraw_Data_report_re_p4so_${color}.svg`;
   image2.src = `img/undraw_feeling_proud_${color}.svg`;
-  image3.src = `img/undraw_conceptual_idea_${color}.svg`;
+  image3.src = `img/undraw_Lost_online_re_upmy_${color}.svg`;
 }
 
 // Dark Mode Styles
@@ -59,7 +59,7 @@ if (currentTheme) {
   }
 }
 
-////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
 // Hero section animation logic
 // Heading Selectors
