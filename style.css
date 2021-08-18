@@ -291,9 +291,19 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   box-shadow: var(--box-shadow);
 }
 
+.image-container__slider-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-container__slider-buttons-container > i:hover{
+  box-shadow: 0px 0px 9px var(--primary-color);
+  cursor: pointer;
+}
+
 img {
-  height: 300px;
-  width: 300px;
+  height: 280px;
+  width: 280px;
 }
 
 /* Projects Section */
