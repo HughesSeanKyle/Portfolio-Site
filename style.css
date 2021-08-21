@@ -292,13 +292,35 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
 }
 
 .image-container__slider-buttons-container {
+  height: 50px;
+  width: 100%;
   display: flex;
+  align-content: center;
   justify-content: space-between;
 }
 
-.image-container__slider-buttons-container > i:hover{
+.image-container__slider-buttons-container > button {
+  display: flex;
+  /* justify-content: space-between; */
+  border-radius: 50%;
+  justify-content: center; 
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+}
+
+.fa-chevron-left + .fa-chevron-right {
+  border-radius: 50%;
+}
+
+/* .image-container__slider-buttons-container > i{
+  transition: all .2s ease-in-out;
+}; */
+
+.image-container__slider-buttons-container > button:hover{
   box-shadow: 0px 0px 9px var(--primary-color);
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 img {
