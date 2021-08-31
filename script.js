@@ -1,3 +1,4 @@
+// Light/Dark selectors
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const nav = document.getElementById('nav');
 const toggleIcon = document.getElementById('toggle-icon');
@@ -88,7 +89,6 @@ function setChar() {
 	const spanChar = document.querySelectorAll(
 		'.hero-section__headings__h1 > span'
 	)[char];
-	console.log(spanChar);
 	// apply the fade classname
 	spanChar.setAttribute('id', 'fade');
 	//   spanChar.className = 'fade';
@@ -102,7 +102,34 @@ function setChar() {
 
 // About section sliders (past, present, future) logic
 
-function aboutTenseSliders() {
+function setTenseSlider() {
+	// Slider Selectors
+	const pastSliderPrev = document.getElementById('btnPastPrev');
+	const pastSliderNext = document.getElementById('btnPastNext');
+	const presentSliderPrev = document.getElementById('btnPresentPrev');
+	const presentSliderNext = document.getElementById('btnPresentNext');
+	const futureSliderPrev = document.getElementById('btnFuturePrev');
+	const futureSliderNext = document.getElementById('btnFutureNext');
+
+	// Slider buttons array
+
+	const sliderBtnsArray = [
+		pastSliderPrev,
+		pastSliderNext,
+		presentSliderPrev,
+		presentSliderNext,
+		futureSliderPrev,
+		futureSliderNext,
+	];
+
+	// Listen for click on each button
+
+	sliderBtnsArray.forEach((sliderBtn) => {
+		sliderBtn.addEventListener('click', () => {
+			console.log(`${sliderBtn.id} was clicked`);
+		});
+	});
+
 	// Create object to hold images
 	// example (object containing arrays with images for slides)
 	let times = {
@@ -113,4 +140,12 @@ function aboutTenseSliders() {
 	// NOTES
 	// 1. Create an array of all btn<tense> button ids
 	// 2. Figure out how to have event listener for all those next/prev buttons
+
+	// Logic needed
+	/*
+    // 1. By clicking any of those 6 slider buttons this function should be triggered
+      - - They can be set into selectors via their id 
+  */
 }
+
+setTenseSlider();
