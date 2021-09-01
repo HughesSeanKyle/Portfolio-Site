@@ -122,30 +122,38 @@ function setTenseSlider() {
 		futureSliderNext,
 	];
 
-	// Listen for click on each button
-
-	sliderBtnsArray.forEach((sliderBtn) => {
-		sliderBtn.addEventListener('click', () => {
-			console.log(`${sliderBtn.id} was clicked`);
-		});
-	});
-
-	// Create object to hold images
-	// example (object containing arrays with images for slides)
+	// Hold images
 	let times = {
 		past: ['past-slide-one', 'past-slide-two', 'past-slide-three'],
 		present: ['present-slide-one', 'present-slide-two', 'present-slide-three'],
 		future: ['future-slide-one', 'future-slide-two', 'future-slide-three'],
 	};
-	// NOTES
-	// 1. Create an array of all btn<tense> button ids
-	// 2. Figure out how to have event listener for all those next/prev buttons
 
-	// Logic needed
-	/*
-    // 1. By clicking any of those 6 slider buttons this function should be triggered
-      - - They can be set into selectors via their id 
-  */
+	const { past, present, future } = times;
+
+	// Helper func to sliderBtnsArray loop
+	// Iterate through selected tense
+	function iterateTense(tense) {}
+
+	// Listen for click on each slider button
+	// Identify what tense the button is for
+	// Create helper function to iterate through selected tense array
+	//// this helper will be able to increment/decrement the idx of tense
+	////// it is in
+
+	sliderBtnsArray.forEach((sliderBtn) => {
+		sliderBtn.addEventListener('click', () => {
+			const sliderBtnId = sliderBtn.id;
+
+			console.log(`${sliderBtnId} was clicked`);
+
+			if (sliderBtnId.includes('Past')) {
+				console.log(past);
+			} else {
+				console.log('This is not a past button');
+			}
+		});
+	});
 }
 
-setTenseSlider();
+document.addEventListener('load', setTenseSlider());
