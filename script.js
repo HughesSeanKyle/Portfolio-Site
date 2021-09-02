@@ -133,10 +133,19 @@ function setTenseSlider() {
 
 	// Helper func to sliderBtnsArray loop
 	// Iterate through selected tense
-	function iterateTense(tense) {}
+
+	// function iterateTenseArr(tense) {
+	// 	tense.forEach((tenseItem, index) => {
+	// 		if (sliderBtnId.includes('Next')) {
+	// 			console.log(index++, tenseItem);
+	// 		} else {
+	// 			console.log(index--, tenseItem);
+	// 		}
+	// 	});
+	// }
 
 	// Listen for click on each slider button
-	// Identify what tense the button is for
+	// Identify what tense (& if next or prev type) the button is for
 	// Create helper function to iterate through selected tense array
 	//// this helper will be able to increment/decrement the idx of tense
 	////// it is in
@@ -145,10 +154,19 @@ function setTenseSlider() {
 		sliderBtn.addEventListener('click', () => {
 			const sliderBtnId = sliderBtn.id;
 
+			// Helper
+			function iterateTenseArr(tense) {
+				tense.forEach((tenseItem, index) => {
+					if (sliderBtnId.includes('Next')) {
+						console.log(tenseItem[index++]);
+					}
+				});
+			}
+
 			console.log(`${sliderBtnId} was clicked`);
 
 			if (sliderBtnId.includes('Past')) {
-				console.log(past);
+				iterateTenseArr([past]);
 			} else {
 				console.log('This is not a past button');
 			}
