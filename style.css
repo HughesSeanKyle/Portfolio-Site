@@ -246,6 +246,7 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
 /* About Section */
 .about-container {
   display: flex;
+  justify-content: center;
 }
 
 .about-container > .image-container > h2 {
@@ -286,9 +287,17 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   border-radius: 10px;
   padding: 10px 20px;
   margin-right: 25px;
-  width: auto;
+  width: 20%;
   background: var(--background);
   box-shadow: var(--box-shadow);
+}
+
+.image-container_images {
+  display: flex;
+  /* justify-content: space-evenly; */
+  width: 80%;
+  position: relative;
+  /* overflow-x: hidden; */
 }
 
 .image-container__slider-buttons-container {

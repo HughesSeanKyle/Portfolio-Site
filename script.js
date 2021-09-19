@@ -153,12 +153,14 @@ function setTenseSlider() {
 	sliderBtnsArray.forEach((sliderBtn) => {
 		sliderBtn.addEventListener('click', () => {
 			const sliderBtnId = sliderBtn.id;
+			const ittr = 1;
 
 			// Helper
 			function iterateTenseArr(tense) {
 				tense.forEach((tenseItem, index) => {
 					if (sliderBtnId.includes('Next')) {
-						console.log(tenseItem[index++]);
+						tenseItem[index] + ittr;
+						console.log(tenseItem[index]);
 					}
 				});
 			}
