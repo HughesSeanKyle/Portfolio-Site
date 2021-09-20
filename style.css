@@ -290,14 +290,20 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
   width: 20%;
   background: var(--background);
   box-shadow: var(--box-shadow);
+  overflow: hidden;
 }
 
 .image-container_images {
   display: flex;
-  /* justify-content: space-evenly; */
-  width: 80%;
+  /* justify-content: space-between; */
   position: relative;
-  /* overflow-x: hidden; */
+}
+
+.image-container_images > img {
+  margin: 18px 27px 18px 0px;
+  padding-left: 10px;
+  border: honeydew solid;
+  width: 95%;
 }
 
 .image-container__slider-buttons-container {

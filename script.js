@@ -102,78 +102,50 @@ function setChar() {
 
 // About section sliders (past, present, future) logic
 
-function setTenseSlider() {
-	// Slider Selectors
-	const pastSliderPrev = document.getElementById('btnPastPrev');
-	const pastSliderNext = document.getElementById('btnPastNext');
-	const presentSliderPrev = document.getElementById('btnPresentPrev');
-	const presentSliderNext = document.getElementById('btnPresentNext');
-	const futureSliderPrev = document.getElementById('btnFuturePrev');
-	const futureSliderNext = document.getElementById('btnFutureNext');
+const pastSlider = document.querySelector('.images-past');
+const pastSliderImages = document.querySelectorAll('.images-past img');
 
-	// Slider buttons array
+const prevPastBtn = document.querySelector('#btnPastPrev');
+const nextPastBtn = document.querySelector('#btnPastNext');
 
-	const sliderBtnsArray = [
-		pastSliderPrev,
-		pastSliderNext,
-		presentSliderPrev,
-		presentSliderNext,
-		futureSliderPrev,
-		futureSliderNext,
-	];
+let counter = 1;
 
-	// Hold images
-	let times = {
-		past: ['past-slide-one', 'past-slide-two', 'past-slide-three'],
-		present: ['present-slide-one', 'present-slide-two', 'present-slide-three'],
-		future: ['future-slide-one', 'future-slide-two', 'future-slide-three'],
-	};
+/*
+	Do not hard code this 27px here 
+	- - Try to find a way to dyanimically get that margin val 
+*/
 
-	const { past, present, future } = times;
+const innerSize = pastSlider.offsetWidth;
+console.log(innerSize);
 
-	// Helper func to sliderBtnsArray loop
-	// Iterate through selected tense
+const size = pastSliderImages[0].offsetParent.clientWidth + 34;
+console.log(size);
+pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
 
-	// function iterateTenseArr(tense) {
-	// 	tense.forEach((tenseItem, index) => {
-	// 		if (sliderBtnId.includes('Next')) {
-	// 			console.log(index++, tenseItem);
-	// 		} else {
-	// 			console.log(index--, tenseItem);
-	// 		}
-	// 	});
-	// }
+nextPastBtn.addEventListener('click', () => {
+	if (counter >= pastSliderImages.length - 1) return;
+	pastSlider.style.transition = 'transform 0.2s ease-in-out';
+	counter++;
+	pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+});
 
-	// Listen for click on each slider button
-	// Identify what tense (& if next or prev type) the button is for
-	// Create helper function to iterate through selected tense array
-	//// this helper will be able to increment/decrement the idx of tense
-	////// it is in
+prevPastBtn.addEventListener('click', () => {
+	if (counter <= 0) return;
+	pastSlider.style.transition = 'transform 0.2s ease-in-out';
+	counter--;
+	pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+});
 
-	sliderBtnsArray.forEach((sliderBtn) => {
-		sliderBtn.addEventListener('click', () => {
-			const sliderBtnId = sliderBtn.id;
-			const ittr = 1;
+pastSlider.addEventListener('transitionend', () => {
+	if (pastSliderImages[counter].id === 'lastClone') {
+		pastSlider.style.transition = 'none';
+		counter = pastSliderImages.length - 2;
+		pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+	}
 
-			// Helper
-			function iterateTenseArr(tense) {
-				tense.forEach((tenseItem, index) => {
-					if (sliderBtnId.includes('Next')) {
-						tenseItem[index] + ittr;
-						console.log(tenseItem[index]);
-					}
-				});
-			}
-
-			console.log(`${sliderBtnId} was clicked`);
-
-			if (sliderBtnId.includes('Past')) {
-				iterateTenseArr([past]);
-			} else {
-				console.log('This is not a past button');
-			}
-		});
-	});
-}
-
-document.addEventListener('load', setTenseSlider());
+	if (pastSliderImages[counter].id === 'firstClone') {
+		pastSlider.style.transition = 'none';
+		counter = pastSliderImages.length - counter;
+		pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+	}
+});
