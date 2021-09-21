@@ -110,13 +110,6 @@ const nextPastBtn = document.querySelector('#btnPastNext');
 
 let counter = 1;
 
-/*
-	Do not hard code this 27px here 
-	- - Try to find a way to dyanimically get that margin val 
-*/
-
-const innerSize = pastSlider.offsetWidth;
-
 const size = pastSliderImages[0].offsetParent.clientWidth + 34;
 pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
 
@@ -147,3 +140,31 @@ pastSlider.addEventListener('transitionend', () => {
 		pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
 	}
 });
+
+/*
+	My class implementation of slider for reusability 
+*/
+
+function initializeSlides() {
+	// All Slide divs
+	// All Slide array images
+	// All slide buttons
+	/* Previous */
+	/* Next */
+
+	class Slider {
+		constructor(msg) {
+			this.msg = msg;
+		}
+
+		logMsg() {
+			console.log(this.msg);
+		}
+	}
+
+	const sliderOne = new Slider('this is slider one');
+	sliderOne.logMsg();
+}
+
+const aboutContainer = document.querySelector('.about-container');
+aboutContainer.addEventListener('onload', initializeSlides());
