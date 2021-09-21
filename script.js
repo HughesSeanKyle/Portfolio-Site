@@ -116,10 +116,8 @@ let counter = 1;
 */
 
 const innerSize = pastSlider.offsetWidth;
-console.log(innerSize);
 
 const size = pastSliderImages[0].offsetParent.clientWidth + 34;
-console.log(size);
 pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
 
 nextPastBtn.addEventListener('click', () => {
