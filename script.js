@@ -147,22 +147,48 @@ pastSlider.addEventListener('transitionend', () => {
 
 function initializeSlides() {
 	// All Slide divs
+	const pastSlider = document.querySelector('.images-past');
 	// All Slide array images
+	const pastSliderImages = document.querySelectorAll('.images-past img');
 	// All slide buttons
 	/* Previous */
+	const prevPastBtn = document.querySelector('#btnPastPrev');
 	/* Next */
+	const nextPastBtn = document.querySelector('#btnPastNext');
 
 	class Slider {
-		constructor(msg) {
-			this.msg = msg;
+		constructor(sliderDiv, sliderImages, prevBtn, nextBtn) {
+			this.sliderDiv = sliderDiv;
+			this.sliderImages = sliderImages;
+			this.prevBtn = prevBtn;
+			this.nextBtn = nextBtn;
+		}
+
+		counter = 1;
+		getFirstImgWidth() {
+			return this.sliderImages[0].offsetParent.clientWidth + 34;
+		}
+
+		setDefaultImg() {
+			return (this.sliderDiv.style.transform =
+				'translateX(' + -this.getFirstImgWidth() * this.counter + 'px)');
 		}
 
 		logMsg() {
-			console.log(this.msg);
+			this.nextBtn.addEventListener('click', () => {
+				if (this.counter >= this.sliderImages.length - 1) return;
+				this.counter++;
+				console.log(this.counter);
+			});
 		}
 	}
 
-	const sliderOne = new Slider('this is slider one');
+	const sliderOne = new Slider(
+		pastSlider,
+		pastSliderImages,
+		prevPastBtn,
+		nextPastBtn
+	);
 	sliderOne.logMsg();
 }
 
