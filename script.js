@@ -102,6 +102,8 @@ function setChar() {
 
 // About section sliders (past, present, future) logic
 
+/* ---
+
 const pastSlider = document.querySelector('.images-past');
 const pastSliderImages = document.querySelectorAll('.images-past img');
 
@@ -111,35 +113,43 @@ const nextPastBtn = document.querySelector('#btnPastNext');
 let counter = 1;
 
 const size = pastSliderImages[0].offsetParent.clientWidth + 34;
-pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
 
-nextPastBtn.addEventListener('click', () => {
-	if (counter >= pastSliderImages.length - 1) return;
-	pastSlider.style.transition = 'transform 0.2s ease-in-out';
-	counter++;
-	pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
-});
+*/
 
-prevPastBtn.addEventListener('click', () => {
-	if (counter <= 0) return;
-	pastSlider.style.transition = 'transform 0.2s ease-in-out';
-	counter--;
-	pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
-});
+// Set default image to be idx 1 of image node
+// ---
+// pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
 
-pastSlider.addEventListener('transitionend', () => {
-	if (pastSliderImages[counter].id === 'lastClone') {
-		pastSlider.style.transition = 'none';
-		counter = pastSliderImages.length - 2;
-		pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
-	}
+// ---
+// nextPastBtn.addEventListener('click', () => {
+// 	if (counter >= pastSliderImages.length - 1) return;
+// 	pastSlider.style.transition = 'transform 0.2s ease-in-out';
+// 	counter++;
+// 	pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+// });
 
-	if (pastSliderImages[counter].id === 'firstClone') {
-		pastSlider.style.transition = 'none';
-		counter = pastSliderImages.length - counter;
-		pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
-	}
-});
+// ---
+// prevPastBtn.addEventListener('click', () => {
+// 	if (counter <= 0) return;
+// 	pastSlider.style.transition = 'transform 0.2s ease-in-out';
+// 	counter--;
+// 	pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+// });
+
+// ---
+// pastSlider.addEventListener('transitionend', () => {
+// 	if (pastSliderImages[counter].id === 'lastClone') {
+// 		pastSlider.style.transition = 'none';
+// 		counter = pastSliderImages.length - 2;
+// 		pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+// 	}
+
+// 	if (pastSliderImages[counter].id === 'firstClone') {
+// 		pastSlider.style.transition = 'none';
+// 		counter = pastSliderImages.length - counter;
+// 		pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
+// 	}
+// });
 
 /*
 	My class implementation of slider for reusability 
@@ -165,20 +175,56 @@ function initializeSlides() {
 		}
 
 		counter = 1;
+		/*
+			This function must still be called inside your interface function. 
+			- - At this moment in time it is 
+				- - logMsg();  
+		*/
 		getFirstImgWidth() {
 			return this.sliderImages[0].offsetParent.clientWidth + 34;
 		}
 
+		/*
+			At this momement this function returns only the translate(-244px).
+			- - Somehow this will need a function of it's own. 
+				- - The transform prop will have to 	
+		*/
+
 		setDefaultImg() {
-			return (this.sliderDiv.style.transform =
-				'translateX(' + -this.getFirstImgWidth() * this.counter + 'px)');
+			return 'translateX(' + -this.getFirstImgWidth() * this.counter + 'px)';
 		}
 
-		logMsg() {
+		enableSlide() {
+			// Set the default image
+			this.sliderDiv.style.transform = this.setDefaultImg();
+
 			this.nextBtn.addEventListener('click', () => {
 				if (this.counter >= this.sliderImages.length - 1) return;
+				this.sliderDiv.style.transition = 'transform 0.2s ease-in-out';
 				this.counter++;
-				console.log(this.counter);
+				// console.log(this.counter);
+				this.sliderDiv.style.transform = this.setDefaultImg();
+			});
+
+			this.prevBtn.addEventListener('click', () => {
+				if (this.counter <= 0) return;
+				this.sliderDiv.style.transition = 'transform 0.2s ease-in-out';
+				this.counter--;
+				this.sliderDiv.style.transform = this.setDefaultImg();
+			});
+
+			this.sliderDiv.addEventListener('transitionend', () => {
+				if (this.sliderImages[this.counter].id === 'lastClone') {
+					this.sliderDiv.style.transition = 'none';
+					this.counter = this.sliderImages.length - 2;
+					this.sliderDiv.style.transform = this.setDefaultImg();
+				}
+
+				if (this.sliderImages[this.counter].id === 'firstClone') {
+					this.sliderDiv.style.transition = 'none';
+					this.counter = this.sliderImages.length - this.counter;
+					this.sliderDiv.style.transform = this.setDefaultImg();
+				}
 			});
 		}
 	}
@@ -189,7 +235,7 @@ function initializeSlides() {
 		prevPastBtn,
 		nextPastBtn
 	);
-	sliderOne.logMsg();
+	sliderOne.enableSlide();
 }
 
 const aboutContainer = document.querySelector('.about-container');
