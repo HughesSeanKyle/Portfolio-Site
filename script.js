@@ -5,6 +5,9 @@ const toggleIcon = document.getElementById('toggle-icon');
 const image1 = document.getElementById('image1');
 const image2 = document.getElementById('image2');
 const image3 = document.getElementById('image3');
+const imageLastClone = document.getElementById('lastClone');
+const imageFirstClone = document.getElementById('firstClone');
+
 const textBox = document.getElementById('text-box');
 
 // Dark or Light Images
@@ -12,6 +15,8 @@ function imageMode(color) {
 	image1.src = `img/undraw_Data_report_re_p4so_${color}.svg`;
 	image2.src = `img/undraw_feeling_proud_${color}.svg`;
 	image3.src = `img/undraw_Lost_online_re_upmy_${color}.svg`;
+	imageLastClone.src = `img/undraw_Lost_online_re_upmy_${color}.svg`;
+	imageFirstClone.src = `img/undraw_Data_report_re_p4so_${color}.svg`;
 }
 
 // Dark Mode Styles
@@ -158,13 +163,20 @@ const size = pastSliderImages[0].offsetParent.clientWidth + 34;
 function initializeSlides() {
 	// All Slide divs
 	const pastSlider = document.querySelector('.images-past');
+	const presentSlider = document.querySelector('.images-present');
+
 	// All Slide array images
 	const pastSliderImages = document.querySelectorAll('.images-past img');
+	const presentSliderImages = document.querySelectorAll('.images-present img');
+
 	// All slide buttons
 	/* Previous */
 	const prevPastBtn = document.querySelector('#btnPastPrev');
+	const prevPresentBtn = document.querySelector('#btnPresentPrev');
+
 	/* Next */
 	const nextPastBtn = document.querySelector('#btnPastNext');
+	const nextPresentBtn = document.querySelector('#btnPresentNext');
 
 	class Slider {
 		constructor(sliderDiv, sliderImages, prevBtn, nextBtn) {
@@ -181,7 +193,7 @@ function initializeSlides() {
 				- - logMsg();  
 		*/
 		getFirstImgWidth() {
-			return this.sliderImages[0].offsetParent.clientWidth + 34;
+			return this.sliderImages[0].offsetParent.clientWidth + 30;
 		}
 
 		/*
@@ -229,13 +241,22 @@ function initializeSlides() {
 		}
 	}
 
-	const sliderOne = new Slider(
+	const sliderPast = new Slider(
 		pastSlider,
 		pastSliderImages,
 		prevPastBtn,
 		nextPastBtn
 	);
-	sliderOne.enableSlide();
+
+	const sliderPresent = new Slider(
+		presentSlider,
+		presentSliderImages,
+		prevPresentBtn,
+		nextPresentBtn
+	);
+
+	sliderPast.enableSlide();
+	sliderPresent.enableSlide();
 }
 
 const aboutContainer = document.querySelector('.about-container');

@@ -250,7 +250,7 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
 }
 
 .about-container > .image-container > h2 {
-  filter: drop-shadow(0px -9px 5px var(--primary-color));  
+  filter: drop-shadow(0px 3.6px 5px var(--primary-color));  
 }
 
 .about__heading-container {
