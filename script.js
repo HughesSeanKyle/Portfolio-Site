@@ -5,6 +5,8 @@ const toggleIcon = document.getElementById('toggle-icon');
 const image1 = document.getElementById('image1');
 const image2 = document.getElementById('image2');
 const image3 = document.getElementById('image3');
+const image4 = document.getElementById('image4');
+
 const imageLastClone = document.getElementById('lastClone');
 const imageFirstClone = document.getElementById('firstClone');
 
@@ -15,6 +17,7 @@ function imageMode(color) {
 	image1.src = `img/undraw_Data_report_re_p4so_${color}.svg`;
 	image2.src = `img/undraw_feeling_proud_${color}.svg`;
 	image3.src = `img/undraw_Lost_online_re_upmy_${color}.svg`;
+	image4.src = `img/tense-slider-images/past/1.undraw_Lost_online_re_upmy_${color}.svg`;
 	imageLastClone.src = `img/undraw_Lost_online_re_upmy_${color}.svg`;
 	imageFirstClone.src = `img/undraw_Data_report_re_p4so_${color}.svg`;
 }
