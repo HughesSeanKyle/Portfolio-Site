@@ -212,20 +212,10 @@ function initializeSlides() {
 		}
 
 		counter = 1;
-		/*
-			This function must still be called inside your interface function. 
-			- - At this moment in time it is 
-				- - logMsg();  
-		*/
+
 		getFirstImgWidth() {
 			return this.sliderImages[0].offsetParent.clientWidth + 27;
 		}
-
-		/*
-			At this momement this function returns only the translate(-244px).
-			- - Somehow this will need a function of it's own. 
-				- - The transform prop will have to 	
-		*/
 
 		setDefaultImg() {
 			return 'translateX(' + -this.getFirstImgWidth() * this.counter + 'px)';
