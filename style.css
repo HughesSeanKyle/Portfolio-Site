@@ -302,7 +302,6 @@ background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11
 .image-container_images > img {
   margin: 18px 27px 18px 0px;
   padding-left: 10px;
-  border: honeydew solid;
   width: 95%;
 }
 
