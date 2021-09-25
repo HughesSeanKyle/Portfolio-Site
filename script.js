@@ -43,7 +43,7 @@ function imageMode(color) {
 // Dark Mode Styles
 function darkMode() {
 	nav.style.backgroundColor = 'rgba(0 0 0 / 50%)';
-	textBox.style.backgroundColor = 'rgba(255 255 255 / 50%)';
+	// textBox.style.backgroundColor = 'rgba(255 255 255 / 50%)';
 	toggleIcon.children[0].textContent = 'Dark Mode';
 	toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
 	imageMode('dark');
