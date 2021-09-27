@@ -54,14 +54,14 @@ section {
 
 h1 {
   font-family: Redressed, sans-serif;
-  font-size: 100px;
+  font-size: 6.25rem;
   margin-bottom: 0;
 }
 
 h2 {
   color: var(--on-background-alt);
   font-family: Noto Sans JP, sans-serif;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: normal;
   transition: all 0.9s ease-in-out;
 }
@@ -71,11 +71,11 @@ nav {
   z-index: 10;
   position: fixed;
   font-family: Lato, sans-serif;
-  font-size: 24px;
   letter-spacing: 3px;
   padding: 21px;
   width: 100vw;
   background: rgb(255 255 255 / 45%);
+  font-size: 1.5rem;
 }
 
 nav > a {
@@ -95,14 +95,6 @@ a:focus {
   color: var(--on-background);
   border-bottom: 3px solid;
 }
-
-/*  
-Navigation notes
-z-index - Will allow nav element to stay on top of other elements
-By default every element has a z-index of 1
-
-background: rgb(255 255 255 / 50%); - Works similar to rgba mentioned in V49 @11:47
-*/
 
 /* Home Section */
 
@@ -454,9 +446,25 @@ p {
   padding: 0;
 }
 
+.contact__heading-container {
+  width: 100vw;
+  text-align: center;
+  background: var(--background);
+  position: relative;
+  box-shadow: 9px 9px 9px var(--primary-color);
+  border-top: solid var(--secondary-color);
+}
+
+.contact__heading {
+  margin-top: 0;
+  transition: all 0.9s ease-in-out;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
+  height: 63vh;
+  align-items: center;
 }
 
 .social-icons > a {
@@ -554,3 +562,48 @@ input:checked + .slider::before {
   font-size: 30px;
   margin-right: 5px;
 }
+
+/*
+Common breakpoints are 
+1. 320px — 480px for mobile devices, 
+2. 481px — 768px for iPads & tablets, 
+3. 769px — 1024px for small screens like laptop
+======================
+Media Queries iPads & tablets 
+======================
+*/
+@media only screen and (max-width: 768px) {
+  /* General */
+  h1 {
+    font-size: 5.4rem;
+  }
+
+  h2 {
+    font-size: 1.50rem;
+  }
+
+  /* NAV */
+  #nav > a {
+    /* display: none; */
+    font-size: 1rem;
+  } 
+
+  .toggle-text {
+    display: none;
+  }
+
+  /* HERO section*/
+  #heroImg {
+    width: 54vw;
+  }
+  
+  .hero-section__img-right__container {
+    margin-right: 18vw;
+  }
+
+  .hero-section__headings {
+    position: absolute;
+}
+}
+
+
