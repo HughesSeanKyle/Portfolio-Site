@@ -99,7 +99,7 @@ a:focus {
 /* Home Section */
 
 #home {
-  background-image: url('abstract-transparent.png');
+  /* background-image: url('abstract-transparent.png'); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -239,6 +239,7 @@ a:focus {
 .about-container {
   display: flex;
   justify-content: center;
+  height: 84vh;
 }
 
 .about-container > .image-container > h2 {
@@ -259,7 +260,7 @@ a:focus {
 }
 
 #about {
-  background-image: url('abstract-about.png');
+  /* background-image: url('abstract-about.png'); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -280,6 +281,7 @@ a:focus {
   padding: 10px 20px;
   margin-right: 25px;
   width: 20%;
+  height: 75vh;
   background: var(--background);
   box-shadow: var(--box-shadow);
   overflow: hidden;
@@ -338,7 +340,7 @@ img {
 /* Projects Section */
 
 #projects {
-  background-image: url('abstract-transparent.png');
+  /* background-image: url('abstract-transparent.png'); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -360,10 +362,6 @@ img {
 .projects__heading {
   margin-top: 0;
   transition: all 0.9s ease-in-out;
-}
-
-.projects__h1{
-  /* margin-top: 0; */
 }
 
 .buttons {
@@ -428,6 +426,10 @@ button:hover:not(.outline) {
   box-shadow: 0px 0px 9px var(--primary-color);
 }
 
+.text-box > img {
+  height: 54vh;
+}
+
 p {
   margin: 0;
   line-height: 25px;
@@ -436,7 +438,7 @@ p {
 /* Contact Section */
 
 #contact {
-  background-image: url('abstract-about.png');
+  /* background-image: url('abstract-about.png'); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -559,8 +561,7 @@ input:checked + .slider::before {
 }
 
 .fas {
-  font-size: 30px;
-  margin-right: 5px;
+  display: none;
 }
 
 /*
@@ -569,9 +570,17 @@ Common breakpoints are
 2. 481px — 768px for iPads & tablets, 
 3. 769px — 1024px for small screens like laptop
 ======================
-Media Queries iPads & tablets 
+Media Queries 
 ======================
 */
+
+
+
+.theme-switch-wrapper {
+  top: 18px;
+}
+
+/* *** iPads & tablets *** */
 @media only screen and (max-width: 768px) {
   /* General */
   h1 {
@@ -583,10 +592,15 @@ Media Queries iPads & tablets
   }
 
   /* NAV */
+
   #nav > a {
     /* display: none; */
     font-size: 1rem;
   } 
+
+  .fa-bars{
+    display: none;
+  }
 
   .toggle-text {
     display: none;
@@ -603,7 +617,81 @@ Media Queries iPads & tablets
 
   .hero-section__headings {
     position: absolute;
+  }
 }
+
+/* *** iPads & tablets *** */
+@media only screen and (max-width: 480px) {
+  /* General */
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  /* NAV */
+
+  #nav > i {
+    display: flex;
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+
+  #nav > a {
+    display: none;
+    /* font-size: 1rem; */
+  } 
+
+  .toggle-text {
+    display: none;
+  }
+
+  /* HERO section*/
+  #heroImg {
+    width: 90vw;
+  }
+
+  .hero-section__img-right__container__skills {
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: baseline;
+    margin-left: -81%;
+}
+  
+  .hero-section__img-right__container {
+    margin-right: 18vw;
+  }
+
+  .hero-section__headings {
+    position: absolute;
+    align-items: baseline;
+  }
+
+  .hero-section__headings__h1 {
+    margin-left: 1.8rem;
+  }
+
+  .hero-section__headings__h2 {
+    bottom: 36%;
+    animation: slideLeft 3s normal linear;
+  }
+  
+  @keyframes slideLeft {
+    from {
+      left: -90%;
+    }
+    to {
+      left: 12%;
+    }
+  }
+
+  /* ABOUT section */
+  .image-container {
+    height: 50vh;
+  }
+
 }
 
 
