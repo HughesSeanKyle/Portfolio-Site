@@ -43,7 +43,7 @@ function imageMode(color) {
 // Dark Mode Styles
 function darkMode() {
 	nav.style.backgroundColor = 'rgba(0 0 0 / 50%)';
-	// textBox.style.backgroundColor = 'rgba(255 255 255 / 50%)';
+	textBox.style.backgroundColor = 'rgba(255 255 255 / 50%)';
 	toggleIcon.children[0].textContent = 'Dark Mode';
 	toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
 	imageMode('dark');
@@ -284,3 +284,24 @@ function initializeSlides() {
 
 const aboutContainer = document.querySelector('.about-container');
 aboutContainer.addEventListener('onload', initializeSlides());
+
+/*
+-----------------------------------------------------------------------------
+Hamburger menu - Mobile 
+-----------------------------------------------------------------------------	
+*/
+
+/*
+	To implement on side slide mobile menu 
+
+	1. When this div is out prevent scroll 
+		- - This can be triggered by the active class set when the div is open 
+	2. Apply light/dark colors to side nav
+	3. Remove style of nav nav top-bar 
+*/
+
+const toggleMobileMenu = document.querySelector('.fa-bars');
+
+toggleMobileMenu.addEventListener('click', () => {
+	console.log('clicked');
+});

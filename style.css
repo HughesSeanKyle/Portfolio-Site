@@ -96,6 +96,10 @@ a:focus {
   border-bottom: 3px solid;
 }
 
+.nav-menu-open {
+  display: none;
+}
+
 /* Home Section */
 
 #home {
@@ -663,6 +667,45 @@ Media Queries
     font-size: 0.9rem;
   }
 
+  /* NAV on body */
+  .nav-menu-open {
+    display: flex;
+    width: 75vw;
+    height: 270rem;
+    background: rgb(255 255 255 / 90%);
+    z-index: 20;
+    position: absolute;
+  }
+
+  .nav-menu__top-bar {
+    display: flex;
+    width: 75vw;
+    height: 4.6rem;
+    background: var(--primary-color);
+    position: fixed;
+    justify-content: flex-end;
+    align-items: center;
+  }   
+
+  .nav-menu__top-bar > i {
+    padding-right: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .nav-menu__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    margin-top: 5rem;
+  }
+
+  .nav-menu__items > li {
+    list-style-type: none;
+    padding-top: 1.5rem;
+    font-size: 1.6rem;
+  }
+
   /* NAV */
 
   #nav > i {
@@ -679,6 +722,7 @@ Media Queries
   .toggle-text {
     display: none;
   }
+
 
   /* HERO section*/
   #heroImg {
@@ -747,6 +791,16 @@ Media Queries
 
   .img-container-two, .img-container-three {
     margin-top: 15px;
+  }
+
+  /* PROJECTS */
+  .text-box {
+    padding: 7.94rem 10.56rem 1.25rem 1.25rem;
+  }
+
+  /* CONTACT */
+  .social-icons {
+    height: 75vh;
   }
 
 }
