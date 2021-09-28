@@ -675,6 +675,19 @@ Media Queries
     background: rgb(255 255 255 / 90%);
     z-index: 20;
     position: absolute;
+    left: 0vw;
+    transition: all 0.9s ease-in-out;
+  }
+
+  .nav-menu-close {
+    display: flex;
+    width: 75vw;
+    height: 270rem;
+    background: rgb(255 255 255 / 90%);
+    z-index: 20;
+    position: absolute;
+    left: -75vw;
+    transition: all 0.9s ease-in-out;
   }
 
   .nav-menu__top-bar {

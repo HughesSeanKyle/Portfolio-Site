@@ -295,13 +295,40 @@ Hamburger menu - Mobile
 	To implement on side slide mobile menu 
 
 	1. When this div is out prevent scroll 
-		- - This can be triggered by the active class set when the div is open 
+		- - This can be triggered by the active class set when the div is open
+		- - There should be a backdrop over the content at the back of slide 
+			- - Backdrop does not need animation. Just apply active class 
+			- - Slide needs animation  
 	2. Apply light/dark colors to side nav
-	3. Remove style of nav nav top-bar 
+		- - Done
+	3. Remove style of nav nav top-bar
+		- - Done 
+	4. a nav-menu-close class should be applied to menu as default
+		- - on click will trigger nav-menu-open 
 */
 
-const toggleMobileMenu = document.querySelector('.fa-bars');
+const sideNav = document.querySelector('.side-menu-container');
 
-toggleMobileMenu.addEventListener('click', () => {
-	console.log('clicked');
-});
+console.log(sideNav);
+
+const toggleMenuOpen = document.querySelector('.fa-bars');
+const toggleMenuClose = document.querySelector('.fa-times');
+
+function toggleOpen() {
+	//remove class
+	sideNav.classList.remove('nav-menu-close');
+
+	//remove class
+	sideNav.classList.add('nav-menu-open');
+}
+
+function toggleClose() {
+	//remove class
+	sideNav.classList.remove('nav-menu-open');
+
+	//remove class
+	sideNav.classList.add('nav-menu-close');
+}
+
+toggleMenuOpen.addEventListener('click', toggleOpen);
+toggleMenuClose.addEventListener('click', toggleClose);
