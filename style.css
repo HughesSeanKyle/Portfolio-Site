@@ -677,7 +677,7 @@ Media Queries
     width: 75vw;
     height: 270rem;
     background: rgb(255 255 255 / 90%);
-    z-index: 30;
+    z-index: 120;
     position: absolute;
     left: 0vw;
     transition: all 0.9s ease-in-out;
@@ -688,7 +688,7 @@ Media Queries
     width: 75vw;
     height: 270rem;
     background: rgb(255 255 255 / 90%);
-    z-index: 30;
+    z-index: 120;
     position: absolute;
     left: -75vw;
     transition: all 0.9s ease-in-out;
@@ -699,7 +699,7 @@ Media Queries
     width: 100vw;
     height: 270rem;
     background: rgb(0 0 0 / 80%);
-    z-index: 20;
+    z-index: 110;
     position: absolute;
     left: 0vw;
   }
@@ -709,7 +709,7 @@ Media Queries
     width: 100vw;
     height: 270rem;
     background: rgb(0 0 0 / 80%);
-    z-index: 20;
+    z-index: 110;
     position: absolute;
     left: -100vw;
   }

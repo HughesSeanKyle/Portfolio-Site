@@ -307,10 +307,13 @@ Hamburger menu - Mobile
 	4. a nav-menu-close class should be applied to menu as default
 		- - on click will trigger nav-menu-open 
 	5. Scroll lock should be applied on open 
+		- - Done 
 	6. Back drop should be applied on open 
+		- - Done 
 	7. Inside toggleOpen
 		- - Set conditional statement to check if a link clicked on then
 			- - fire toggleClose 
+				- - Done 
 */
 
 const sideNav = document.querySelector('.side-menu-container');
@@ -318,6 +321,8 @@ const backdrop = document.querySelector('.backdrop');
 
 const toggleMenuOpen = document.querySelector('.fa-bars');
 const toggleMenuClose = document.querySelector('.fa-times');
+
+const navMenuItems = document.querySelectorAll('.nav-menu__item');
 
 // Helpers
 
@@ -343,6 +348,13 @@ function toggleOpen() {
 	//add class
 	sideNav.classList.add('nav-menu-open');
 	backdrop.classList.add('backdrop-active');
+
+	// If nav link clicked while open
+	navMenuItems.forEach((navMenuitem) => {
+		navMenuitem.addEventListener('click', () => {
+			toggleClose();
+		});
+	});
 
 	// Disable scroll
 	disableScrolling();
