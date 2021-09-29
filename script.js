@@ -128,55 +128,6 @@ function setChar() {
 
 // About section sliders (past, present, future) logic
 
-/* ---
-
-const pastSlider = document.querySelector('.images-past');
-const pastSliderImages = document.querySelectorAll('.images-past img');
-
-const prevPastBtn = document.querySelector('#btnPastPrev');
-const nextPastBtn = document.querySelector('#btnPastNext');
-
-let counter = 1;
-
-const size = pastSliderImages[0].offsetParent.clientWidth + 34;
-
-*/
-
-// Set default image to be idx 1 of image node
-// ---
-// pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
-
-// ---
-// nextPastBtn.addEventListener('click', () => {
-// 	if (counter >= pastSliderImages.length - 1) return;
-// 	pastSlider.style.transition = 'transform 0.2s ease-in-out';
-// 	counter++;
-// 	pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
-// });
-
-// ---
-// prevPastBtn.addEventListener('click', () => {
-// 	if (counter <= 0) return;
-// 	pastSlider.style.transition = 'transform 0.2s ease-in-out';
-// 	counter--;
-// 	pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
-// });
-
-// ---
-// pastSlider.addEventListener('transitionend', () => {
-// 	if (pastSliderImages[counter].id === 'lastClone') {
-// 		pastSlider.style.transition = 'none';
-// 		counter = pastSliderImages.length - 2;
-// 		pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
-// 	}
-
-// 	if (pastSliderImages[counter].id === 'firstClone') {
-// 		pastSlider.style.transition = 'none';
-// 		counter = pastSliderImages.length - counter;
-// 		pastSlider.style.transform = 'translateX(' + -size * counter + 'px)';
-// 	}
-// });
-
 /*
 	My class implementation of slider for reusability 
 */
@@ -291,31 +242,6 @@ Hamburger menu - Mobile
 -----------------------------------------------------------------------------	
 */
 
-/*
-	To implement on side slide mobile menu 
-
-	1. When this div is out prevent scroll 
-		- - This can be triggered by the active class set when the div is open
-		- - There should be a backdrop over the content at the back of slide 
-			- - Backdrop does not need animation. Just apply active class 
-			- - Slide needs animation 
-				- - Done  
-	2. Apply light/dark colors to side nav
-		- - Done
-	3. Remove style of nav nav top-bar
-		- - Done 
-	4. a nav-menu-close class should be applied to menu as default
-		- - on click will trigger nav-menu-open 
-	5. Scroll lock should be applied on open 
-		- - Done 
-	6. Back drop should be applied on open 
-		- - Done 
-	7. Inside toggleOpen
-		- - Set conditional statement to check if a link clicked on then
-			- - fire toggleClose 
-				- - Done 
-*/
-
 const sideNav = document.querySelector('.side-menu-container');
 const backdrop = document.querySelector('.backdrop');
 
@@ -335,7 +261,7 @@ function disableScrolling() {
 	};
 }
 
-// enable acroll
+// enable scroll
 function enableScrolling() {
 	window.onscroll = function () {};
 }
