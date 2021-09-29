@@ -298,36 +298,67 @@ Hamburger menu - Mobile
 		- - This can be triggered by the active class set when the div is open
 		- - There should be a backdrop over the content at the back of slide 
 			- - Backdrop does not need animation. Just apply active class 
-			- - Slide needs animation  
+			- - Slide needs animation 
+				- - Done  
 	2. Apply light/dark colors to side nav
 		- - Done
 	3. Remove style of nav nav top-bar
 		- - Done 
 	4. a nav-menu-close class should be applied to menu as default
 		- - on click will trigger nav-menu-open 
+	5. Scroll lock should be applied on open 
+	6. Back drop should be applied on open 
+	7. Inside toggleOpen
+		- - Set conditional statement to check if a link clicked on then
+			- - fire toggleClose 
 */
 
 const sideNav = document.querySelector('.side-menu-container');
-
-console.log(sideNav);
+const backdrop = document.querySelector('.backdrop');
 
 const toggleMenuOpen = document.querySelector('.fa-bars');
 const toggleMenuClose = document.querySelector('.fa-times');
 
-function toggleOpen() {
-	//remove class
-	sideNav.classList.remove('nav-menu-close');
+// Helpers
 
-	//remove class
+// Disable scroll
+function disableScrolling() {
+	let x = window.scrollX;
+	let y = window.scrollY;
+	window.onscroll = function () {
+		window.scrollTo(x, y);
+	};
+}
+
+// enable acroll
+function enableScrolling() {
+	window.onscroll = function () {};
+}
+
+function toggleOpen() {
+	//remove class (remove default)
+	sideNav.classList.remove('nav-menu-close');
+	backdrop.classList.remove('backdrop-inactive');
+
+	//add class
 	sideNav.classList.add('nav-menu-open');
+	backdrop.classList.add('backdrop-active');
+
+	// Disable scroll
+	disableScrolling();
 }
 
 function toggleClose() {
 	//remove class
 	sideNav.classList.remove('nav-menu-open');
+	backdrop.classList.remove('backdrop-active');
 
-	//remove class
+	//add class
 	sideNav.classList.add('nav-menu-close');
+	backdrop.classList.add('backdrop-inactive');
+
+	// enable acroll
+	enableScrolling();
 }
 
 toggleMenuOpen.addEventListener('click', toggleOpen);

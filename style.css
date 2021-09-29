@@ -100,6 +100,10 @@ a:focus {
   display: none;
 }
 
+.backdrop-active {
+  display: none;
+}
+
 /* Home Section */
 
 #home {
@@ -667,13 +671,13 @@ Media Queries
     font-size: 0.9rem;
   }
 
-  /* NAV on body */
+  /* NAV and backdrop on body */
   .nav-menu-open {
     display: flex;
     width: 75vw;
     height: 270rem;
     background: rgb(255 255 255 / 90%);
-    z-index: 20;
+    z-index: 30;
     position: absolute;
     left: 0vw;
     transition: all 0.9s ease-in-out;
@@ -684,10 +688,30 @@ Media Queries
     width: 75vw;
     height: 270rem;
     background: rgb(255 255 255 / 90%);
-    z-index: 20;
+    z-index: 30;
     position: absolute;
     left: -75vw;
     transition: all 0.9s ease-in-out;
+  }
+
+  .backdrop-active {
+    display: flex;
+    width: 100vw;
+    height: 270rem;
+    background: rgb(0 0 0 / 80%);
+    z-index: 20;
+    position: absolute;
+    left: 0vw;
+  }
+
+  .backdrop-inactive {
+    display: flex;
+    width: 100vw;
+    height: 270rem;
+    background: rgb(0 0 0 / 80%);
+    z-index: 20;
+    position: absolute;
+    left: -100vw;
   }
 
   .nav-menu__top-bar {
