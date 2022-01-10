@@ -335,6 +335,34 @@ img {
 
 /* Projects Section */
 
+/* To be defined */
+/*
+  class="slider-buttons-container__proj-next"
+  id="btnProjPrev"
+  class="slider-buttons-container__proj-prev"
+  id="btnProjNext"
+*/
+/* To be defined */
+
+.image-container_images-projects {
+  display: flex;
+  position: relative;
+  height: 90%
+}
+
+
+.image-container-projects {
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 25px;
+  width: 45%;
+  height: 75vh;
+  background: var(--background);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
 #projects {
   background-size: 100% 100%;
   background-repeat: no-repeat;

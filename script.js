@@ -19,7 +19,7 @@ const imgFirstClonePresent = document.querySelector('.presentFirstClone');
 const imgLastCloneFuture = document.querySelector('.futureLastClone');
 const imgFirstCloneFuture = document.querySelector('.futureFirstClone');
 
-const textBox = document.getElementById('text-box');
+// const textBox = document.getElementById('text-box');
 
 // Dark or Light Images
 function imageMode(color) {
@@ -43,7 +43,7 @@ function imageMode(color) {
 // Dark Mode Styles
 function darkMode() {
 	nav.style.backgroundColor = 'rgba(0 0 0 / 50%)';
-	textBox.style.backgroundColor = 'rgba(255 255 255 / 50%)';
+	// textBox.style.backgroundColor = 'rgba(255 255 255 / 50%)';
 	toggleIcon.children[0].textContent = 'Dark Mode';
 	toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
 	imageMode('dark');
@@ -52,7 +52,7 @@ function darkMode() {
 // Light Mode Styles
 function lightMode() {
 	nav.style.backgroundColor = 'rgba(255 255 255 / 50%)';
-	textBox.style.backgroundColor = 'rgba(0 0 0 / 50%)';
+	// textBox.style.backgroundColor = 'rgba(0 0 0 / 50%)';
 	toggleIcon.children[0].textContent = 'Light Mode';
 	toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
 	imageMode('light');
