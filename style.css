@@ -418,7 +418,7 @@ img {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33% 33% 33%;
   grid-gap: 0.81rem;
   padding-top: 2rem;
 }
@@ -455,7 +455,7 @@ img {
 }
 
 .grid-card-middle__text {
-  padding: 0.3rem;
+  padding: 0.4rem;
   transition: all 0.9s ease-in-out;
 }
 
@@ -701,6 +701,20 @@ Media Queries
       }
 }
 
+@media only screen and (max-width: 981px) {
+  /* *** PROJECTS *** */
+  .grid-container {
+    grid-template-columns: 50% 50%;
+  } 
+}
+
+@media only screen and (max-width: 675px) {
+  /* *** PROJECTS *** */
+  .grid-container {
+    grid-template-columns: 50%;
+  } 
+}
+
 /* *** Mobile *** */
 @media only screen and (max-width: 480px) {
   /* General */
@@ -716,7 +730,7 @@ Media Queries
   .nav-menu-open {
     display: flex;
     width: 75vw;
-    height: 270rem;
+    height: 400rem;
     background: rgb(255 255 255 / 90%);
     z-index: 120;
     position: absolute;
@@ -727,7 +741,7 @@ Media Queries
   .nav-menu-close {
     display: flex;
     width: 75vw;
-    height: 270rem;
+    height: 400rem;
     background: rgb(255 255 255 / 90%);
     z-index: 120;
     position: absolute;
@@ -738,7 +752,7 @@ Media Queries
   .backdrop-active {
     display: flex;
     width: 100vw;
-    height: 270rem;
+    height: 400rem;
     background: rgb(0 0 0 / 80%);
     z-index: 110;
     position: absolute;
@@ -748,7 +762,7 @@ Media Queries
   .backdrop-inactive {
     display: flex;
     width: 100vw;
-    height: 270rem;
+    height: 400rem;
     background: rgb(0 0 0 / 80%);
     z-index: 110;
     position: absolute;
@@ -867,11 +881,6 @@ Media Queries
 
   .img-container-two, .img-container-three {
     margin-top: 15px;
-  }
-
-  /* PROJECTS */
-  .text-box {
-    padding: 7.94rem 10.56rem 1.25rem 1.25rem;
   }
 
   /* CONTACT */
