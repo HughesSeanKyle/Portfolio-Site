@@ -871,7 +871,7 @@ Media Queries
 
   .image-container_images > img {
     margin: 18px 27px -18px 0px;
-    padding: 0px 0px 10px 18px;
+    padding: 0px 0px 10px 0.86rem;
     height: 48vh;
   }
 
