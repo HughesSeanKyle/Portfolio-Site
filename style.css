@@ -883,6 +883,11 @@ Media Queries
     margin-top: 15px;
   }
 
+  /* PROJECTS */
+  #projects {
+    padding: 1rem 0 0 0;
+  }
+
   /* CONTACT */
   .social-icons {
     height: 75vh;
