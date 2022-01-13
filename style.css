@@ -899,7 +899,11 @@ Media Queries
   
   .social-icons__container {
     flex-direction: column;
-    padding-left: 5rem;
+    padding-left: 6.21rem;
+  }
+
+  .social-icons__container > a {
+    padding-top: 2.7rem;
   }
 
 }
