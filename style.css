@@ -520,6 +520,10 @@ img {
   align-items: center;
 }
 
+.social-icons__container {
+  display: flex;
+}
+
 .social-icons > a {
   margin: 0;
   padding-left: 45px;
@@ -891,6 +895,11 @@ Media Queries
   /* CONTACT */
   .social-icons {
     height: 75vh;
+  }
+  
+  .social-icons__container {
+    flex-direction: column;
+    padding-left: 5rem;
   }
 
 }
