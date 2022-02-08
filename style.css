@@ -769,7 +769,7 @@ Media Queries
   .about__skills {
     padding-top: 1rem;
     text-decoration: underline;
-}
+  }
 }
 
 /* *** Mobile *** */
@@ -787,7 +787,7 @@ Media Queries
   .nav-menu-open {
     display: flex;
     width: 75vw;
-    height: 400rem;
+    height: 800rem;
     background: rgb(255 255 255 / 90%);
     z-index: 120;
     position: absolute;
@@ -798,7 +798,7 @@ Media Queries
   .nav-menu-close {
     display: flex;
     width: 75vw;
-    height: 400rem;
+    height: 800rem;
     background: rgb(255 255 255 / 90%);
     z-index: 120;
     position: absolute;
@@ -809,7 +809,7 @@ Media Queries
   .backdrop-active {
     display: flex;
     width: 100vw;
-    height: 400rem;
+    height: 800rem;
     background: rgb(0 0 0 / 80%);
     z-index: 110;
     position: absolute;
