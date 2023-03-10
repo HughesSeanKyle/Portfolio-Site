@@ -2,43 +2,43 @@
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const nav = document.getElementById('nav');
 const toggleIcon = document.getElementById('toggle-icon');
-const image1 = document.getElementById('image1');
-const image2 = document.getElementById('image2');
-const image3 = document.getElementById('image3');
-const image4 = document.getElementById('image4');
-const image5 = document.getElementById('image5');
-const image6 = document.getElementById('image6');
-const image7 = document.getElementById('image7');
-const image8 = document.getElementById('image8');
-const image9 = document.getElementById('image9');
+// const image1 = document.getElementById('image1');
+// const image2 = document.getElementById('image2');
+// const image3 = document.getElementById('image3');
+// const image4 = document.getElementById('image4');
+// const image5 = document.getElementById('image5');
+// const image6 = document.getElementById('image6');
+// const image7 = document.getElementById('image7');
+// const image8 = document.getElementById('image8');
+// const image9 = document.getElementById('image9');
 
-const imgLastClonePast = document.querySelector('.pastLastClone');
-const imgFirstClonePast = document.querySelector('.pastFirstClone');
-const imgLastClonePresent = document.querySelector('.presentLastClone');
-const imgFirstClonePresent = document.querySelector('.presentFirstClone');
-const imgLastCloneFuture = document.querySelector('.futureLastClone');
-const imgFirstCloneFuture = document.querySelector('.futureFirstClone');
+// const imgLastClonePast = document.querySelector('.pastLastClone');
+// const imgFirstClonePast = document.querySelector('.pastFirstClone');
+// const imgLastClonePresent = document.querySelector('.presentLastClone');
+// const imgFirstClonePresent = document.querySelector('.presentFirstClone');
+// const imgLastCloneFuture = document.querySelector('.futureLastClone');
+// const imgFirstCloneFuture = document.querySelector('.futureFirstClone');
 
 // const textBox = document.getElementById('text-box');
 
 // Dark or Light Images
-function imageMode(color) {
-	image1.src = `img/undraw_Data_report_re_p4so_${color}.svg`;
-	image2.src = `img/undraw_feeling_proud_${color}.svg`;
-	image3.src = `img/undraw_Lost_online_re_upmy_${color}.svg`;
-	image4.src = `img/tense-slider-images/past/1.past-story_${color}.svg`;
-	image5.src = `img/tense-slider-images/past/2.past-story_${color}.svg`;
-	image6.src = `img/tense-slider-images/present/1.present-story_${color}.svg`;
-	image7.src = `img/tense-slider-images/present/2.present-story_${color}.svg`;
-	image8.src = `img/tense-slider-images/future/1.future-story_${color}.svg`;
-	image9.src = `img/tense-slider-images/future/2.future-story_${color}.svg`;
-	imgLastClonePast.src = `img/tense-slider-images/past/2.past-story_${color}.svg`;
-	imgFirstClonePast.src = `img/undraw_Data_report_re_p4so_${color}.svg`;
-	imgLastClonePresent.src = `img/tense-slider-images/present/2.present-story_${color}.svg`;
-	imgFirstClonePresent.src = `img/undraw_feeling_proud_${color}.svg`;
-	imgLastCloneFuture.src = `img/tense-slider-images/future/2.future-story_${color}.svg`;
-	imgFirstCloneFuture.src = `img/undraw_Lost_online_re_upmy_${color}.svg`;
-}
+// function imageMode(color) {
+// 	image1.src = `img/undraw_Data_report_re_p4so_${color}.svg`;
+// 	image2.src = `img/undraw_feeling_proud_${color}.svg`;
+// 	image3.src = `img/undraw_Lost_online_re_upmy_${color}.svg`;
+// 	image4.src = `img/tense-slider-images/past/1.past-story_${color}.svg`;
+// 	image5.src = `img/tense-slider-images/past/2.past-story_${color}.svg`;
+// 	image6.src = `img/tense-slider-images/present/1.present-story_${color}.svg`;
+// 	image7.src = `img/tense-slider-images/present/2.present-story_${color}.svg`;
+// 	image8.src = `img/tense-slider-images/future/1.future-story_${color}.svg`;
+// 	image9.src = `img/tense-slider-images/future/2.future-story_${color}.svg`;
+// 	imgLastClonePast.src = `img/tense-slider-images/past/2.past-story_${color}.svg`;
+// 	imgFirstClonePast.src = `img/undraw_Data_report_re_p4so_${color}.svg`;
+// 	imgLastClonePresent.src = `img/tense-slider-images/present/2.present-story_${color}.svg`;
+// 	imgFirstClonePresent.src = `img/undraw_feeling_proud_${color}.svg`;
+// 	imgLastCloneFuture.src = `img/tense-slider-images/future/2.future-story_${color}.svg`;
+// 	imgFirstCloneFuture.src = `img/undraw_Lost_online_re_upmy_${color}.svg`;
+// }
 
 // Dark Mode Styles
 function darkMode() {
@@ -46,7 +46,7 @@ function darkMode() {
 	// textBox.style.backgroundColor = 'rgba(255 255 255 / 50%)';
 	toggleIcon.children[0].textContent = 'Dark Mode';
 	toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
-	imageMode('dark');
+	// imageMode('dark');
 }
 
 // Light Mode Styles
@@ -55,7 +55,7 @@ function lightMode() {
 	// textBox.style.backgroundColor = 'rgba(0 0 0 / 50%)';
 	toggleIcon.children[0].textContent = 'Light Mode';
 	toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
-	imageMode('light');
+	// imageMode('light');
 }
 
 // Switch Theme Dynamically
@@ -234,7 +234,7 @@ function initializeSlides() {
 }
 
 const aboutContainer = document.querySelector('.about-container');
-aboutContainer.addEventListener('onload', initializeSlides());
+// aboutContainer.addEventListener('onload', initializeSlides());
 
 /*
 -----------------------------------------------------------------------------
@@ -245,7 +245,8 @@ Hamburger menu - Mobile
 const sideNav = document.querySelector('.side-menu-container');
 const backdrop = document.querySelector('.backdrop');
 
-const toggleMenuOpen = document.querySelector('.fa-bars');
+// const toggleMenuOpen = document.querySelector('.fa-bars');
+const toggleMenuOpen = document.getElementById('hamburgerIcon');
 const toggleMenuClose = document.querySelector('.fa-times');
 
 const navMenuItems = document.querySelectorAll('.nav-menu__item');

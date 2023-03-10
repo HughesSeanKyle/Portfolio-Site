@@ -1,526 +1,955 @@
+<!-- SITE : https://venerable-raindrop-e577cd.netlify.app/ -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Light Dark Mode</title>
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Dark Mode Switch -->
     <div class="theme-switch-wrapper">
-        <span id="toggle-icon">
-            <span class="toggle-text">Light Mode</span>
-            <i class="fas fa-sun"></i>
-        </span>
-        <label class="theme-switch">
-            <input type="checkbox">
-            <div class="slider round"></div>
-        </label>
+      <span id="toggle-icon">
+        <span class="toggle-text">Light Mode</span>
+        <i class="fas fa-sun"></i>
+      </span>
+      <label class="theme-switch">
+        <input type="checkbox" />
+        <div class="slider round"></div>
+      </label>
     </div>
 
     <!-- Slide out menu and backdrop -->
 
-    <div class="backdrop backdrop-inactive"> 
-    </div>
+    <div class="backdrop backdrop-inactive"></div>
 
     <div class="side-menu-container nav-menu-close">
-        <div class="nav-menu__top-bar">
-            <i class="fa fa-times" aria-hidden="true"></i> 
-        </div>
-        <ul class="nav-menu__items">
-            <li class="nav-menu__item"><a href="#home">HOME</a></li>
-            <li class="nav-menu__item"><a href="#about">ABOUT</a></li>
-            <li class="nav-menu__item"><a href="#projects">PROJECTS</a></li>
-            <li class="nav-menu__item"><a href="#contact">CONTACT</a></li>
-        </ul> 
+      <div class="nav-menu__top-bar">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      <ul class="nav-menu__items">
+        <li class="nav-menu__item"><a href="#home">HOME</a></li>
+        <li class="nav-menu__item"><a href="#about">ABOUT</a></li>
+        <li class="nav-menu__item"><a href="#projects">PROJECTS</a></li>
+        <li class="nav-menu__item"><a href="#contact">CONTACT</a></li>
+      </ul>
     </div>
     <!-- Navigation -->
     <nav id="nav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
-        <i id="hamburgerIcon" class="fas fa-bars"></i> 
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contact">CONTACT</a>
+      <i id="hamburgerIcon" class="fas fa-bars"></i>
     </nav>
 
-    
     <!-- Home Section -->
     <section id="home">
-        <div class="hero-section floating">
-            <div class="hero-section__headings">
-                <h1 class="hero-section__headings__h1">Hi, I'm Kyle</h1>
-                <h2 class="hero-section__headings__h2">Welcome to my portfolio</h2>
-            </div>
-            <div class="hero-section__img-right">
-                <div class="hero-section__img-right__container">
-                    <ul class="hero-section__img-right__container__skills">
-                        <li><img src="img/Skill-Logos/1.Html.png" alt="html-logo"></li>
-                        <li><img src="img/Skill-Logos/2.Css.png" alt="css-logo"></li>
-                        <li><img src="img/Skill-Logos/3.Javascript.png" alt="js-logo"></li>
-                        <li><img src="img/Skill-Logos/4.React-removebg.png" alt="react-logo"></li>
-                        <li><img src="img/Skill-Logos/5.node-js.png" alt="node-logo"></li>
-                        <li><img src="img/Skill-Logos/6.Solidity-removebg.png" alt="solidity-logo"></li>
-                        <li><img src="img/Skill-Logos/7.Truffle-removebg.png" alt="truffle-logo"></li>
-                        <li><img src="img/Skill-Logos/8.Ganache-removebg.png" alt="ganache-logo"></li>
-                        <li><img src="img/Skill-Logos/9.Web3-removebg.png" alt="web3-logo"></li>
-                    </ul>
-                </div>
-                <img id="heroImg" src="Hero-Gimp-RmBG.png" alt="Hero Image">
-            </div>
+      <div class="hero-section floating">
+        <div class="hero-section__headings">
+          <h1 class="hero-section__headings__h1">Hi, I'm Kyle</h1>
+          <h2 class="hero-section__headings__h2">Welcome to my portfolio</h2>
         </div>
+        <div class="hero-section__img-right">
+          <div class="hero-section__img-right__container">
+            <ul class="hero-section__img-right__container__skills">
+              <li><img src="img/Skill-Logos/1.Html.png" alt="html-logo" /></li>
+              <li><img src="img/Skill-Logos/2.Css.png" alt="css-logo" /></li>
+              <li>
+                <img src="img/Skill-Logos/3.Javascript.png" alt="js-logo" />
+              </li>
+              <li>
+                <img
+                  src="img/Skill-Logos/4.React-removebg.png"
+                  alt="react-logo"
+                />
+              </li>
+              <li>
+                <img src="img/Skill-Logos/5.node-js.png" alt="node-logo" />
+              </li>
+              <li>
+                <img
+                  src="img/Skill-Logos/6.Solidity-removebg.png"
+                  alt="solidity-logo"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/Skill-Logos/7.Truffle-removebg.png"
+                  alt="truffle-logo"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/Skill-Logos/8.Ganache-removebg.png"
+                  alt="ganache-logo"
+                />
+              </li>
+              <li>
+                <img
+                  src="img/Skill-Logos/9.Web3-removebg.png"
+                  alt="web3-logo"
+                />
+              </li>
+            </ul>
+          </div>
+          <img id="heroImg" src="Hero-Gimp-RmBG.png" alt="Hero Image" />
+        </div>
+      </div>
     </section>
     <!-- About Section -->
     <section id="about">
-        <div class="about__heading-container">
-            <h1 class="about__heading">About me</h1>
+      <div class="about__heading-container">
+        <h1 class="about__heading">About me</h1>
+      </div>
+      <div class="professional-experience_content-container">
+        <div class="grid-item-about-pe">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Hey there, thanks for popping in.</p>
+          </div>
+          <div class="grid-card-middle-about-pe">
+            <p class="grid-card-middle-about__text">
+              I'm Kyle and I love building things on the web. Prior to web
+              development I was a junior accountant. I decided to make the
+              switch over to web development as I saw many businesses would be
+              moving over into the digital space. I have always had a passion
+              for digital bussiness and thus am well versed in Ecommerce. I
+              enjoy analysing the strengths and weaknesses of online businesses
+              and could spend hours scouring through Ecommerce or Crypto related
+              metrics.
+            </p>
+            <p class="grid-card-middle-about__text">
+              I decided to pursue web development as it would allow me to
+              channel all the skills I have aquired into one domain. Blockchain
+              dapp development is a path I strongly pursue as I am a firm
+              believer in decentralized finance. Looking forward to meet you.
+              Best, Kyle.
+            </p>
+          </div>
         </div>
-        <div class="about-container">
-            <div class="image-container img-container-one">
-                <h2>Past</h2>
-                <div class="image-container_images images-past">
-                    <img src="img/tense-slider-images/past/2.past-story_light.svg"  id="lastClone" class="pastLastClone" alt="">
-
-                    <img src="img/undraw_Data_report_re_p4so_light.svg" alt="Data Report" id="image1">
-                    
-
-                    <img src="img/tense-slider-images/past/1.past-story_light.svg" alt="Idea" id="image4">
-                    <img src="img/tense-slider-images/past/2.past-story_light.svg" alt="Idea" id="image5">
-
-
-                    <img src="img/undraw_Data_report_re_p4so_light.svg" id="firstClone" class="pastFirstClone" alt="">
-                </div>
-                <div class="image-container__slider-buttons-container">
-                    <button class="slider-buttons-container__past-next" id="btnPastPrev">
-                        <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
-                    </button>
-                    <button class="slider-buttons-container__past-prev" id="btnPastNext">
-                        <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="image-container img-container-two">
-                <h2>Present</h2>
-                <div class="image-container_images images-present">
-                    <img src="img/tense-slider-images/present/2.present-story_light.svg" id="lastClone" class="presentLastClone" alt="">
-
-                    <img src="img/undraw_feeling_proud_light.svg" alt="Feeling Proud" id="image2">
-                    <img src="img/tense-slider-images/present/1.present-story_light.svg" alt="Idea" id="image6">
-                    <img src="img/tense-slider-images/present/2.present-story_light.svg" alt="Idea" id="image7">
-
-                    <img src="img/undraw_feeling_proud_light.svg" id="firstClone" class="presentFirstClone" alt="">
-                </div>
-                <div class="image-container__slider-buttons-container">
-                    <button class="slider-buttons-container__present-next" id="btnPresentPrev">
-                        <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
-                    </button>
-                    <button class="slider-buttons-container__present-prev" id="btnPresentNext">
-                        <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="image-container img-container-three">
-                <h2>Future</h2>
-                <div class="image-container_images images-future">
-                    <img src="img/tense-slider-images/future/2.future-story_light.svg" id="lastClone" class="futureLastClone" alt="">
-
-                    <img src="img/undraw_Lost_online_re_upmy_light.svg" alt="Idea" id="image3">
-                    <img src="img/tense-slider-images/future/1.future-story_light.svg" alt="Idea" id="image8">
-                    <img src="img/tense-slider-images/future/2.future-story_light.svg" alt="Idea" id="image9">
-
-                    <img src="img/undraw_Lost_online_re_upmy_light.svg"  id="firstClone" class="futureFirstClone" alt="">
-                    
-                </div>
-                <div class="image-container__slider-buttons-container">
-                    <button class="slider-buttons-container__future-next" id="btnFuturePrev">
-                        <i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>
-                    </button>
-                    <button class="slider-buttons-container__future-prev" id="btnFutureNext">
-                        <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
+      </div>
+      <h2 class="about__skills">My Skills</h2>
+      <div class="grid-container-about">
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: HTML</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Learning HTML has taught me how the BEM naming convention works,
+              the basics of SEO, how browsers read web apps and more...
+            </p>
+          </div>
         </div>
-        <h2 class="about__skills"> My Skills</h2>
-            <div class="grid-container-about"> 
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: HTML</p>
-                        <p class="skill-item-level">Proficiency Level: Hands on experience</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        Learning HTML has taught me how the BEM naming convention works, the basics of SEO, how browsers read web apps and more...
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: CSS</p>
-                        <p class="skill-item-level">Proficiency Level: Hands on experience</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        CSS has taught me two important layout techniques: Flexbox and CSS Grid. I have learned much more but the layout techniques is what I find valuable.
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: Javascript</p>
-                        <p class="skill-item-level">Proficiency Level: Hands on experience</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        The most important thing JS has taught me is to reuse code, how to make the wesite interactive, and much much more...
-                        </p>
-                    </div>
-                </div> 
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: Bootstrap</p>
-                        <p class="skill-item-level">Proficiency Level: Hands on experience</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        I have hands on experience with both regular Bootstrap and Bootstrap for React. This has sped up the styling aspect of my projects so much.  
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: React Js</p>
-                        <p class="skill-item-level">Proficiency Level: Hands on experience</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        React is amazing. I recommend this as a library to any new web developer. I have hands on experience in both Class and Hook based Life Cycle Projects. 
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: React-Redux</p>
-                        <p class="skill-item-level">Proficiency Level: Strong knowledge and still learning</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        Redux is amazing. I like the fact that you can bypass the prop system with Redux. Which means you can have both Global and component level state without passing global state through props.  
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: Node JS</p>
-                        <p class="skill-item-level">Proficiency Level: Strong knowledge and still learning</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        By learning Node js I have learned about Express js as well. Node js projects I have studied includes setting up routes, authentication and authorization, and creating CRUD HTTP requests.  
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: Mongo db and Postgres</p>
-                        <p class="skill-item-level">Proficiency Level: Basic knowledge and still learning</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        I understand how basic request can be made to both Mongo db and Postgres. Mongo db uses MQL and Postgres used SQL which is the query language used to manipulate and iteract with the data.  
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: Postman</p>
-                        <p class="skill-item-level">Proficiency Level: Hands on experience</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        Probably one of my favorite ways to test routes before diving into the code. If a response returned as null postman would be my go to for debugging.  
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: Github, Git, Bash</p>
-                        <p class="skill-item-level">Proficiency Level: Hands on experience</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        I have basic skills in push and pull requests, I can unstage and remove added commits from github. I know basic linux commands to create and delete files and folders and to navigate directories.  
-                        </p>
-                    </div>
-                </div>
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: Blockchain technologies I</p>
-                        <p class="skill-item-level">Proficiency Level: Strong Knowledge</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        >
-                        Solidity: I can read smart contracts written in Soldity. Truffle: I can write basic tests in Mocha and Chai using the truffle test suite.
-                        </p>
-                    </div>
-                </div> 
-                <div class="grid-item-about">
-                    <div class="grid-card-top-about">
-                        <p class="skill-item">Skill: Blockchain technologies II</p>
-                        <p class="skill-item-level">Proficiency Level: Strong Knowledge</p>
-                    </div>
-                    <div class="grid-card-middle-about">
-                        <p class="grid-card-middle-about__text"
-                        > Ganache: I can set up a local blockchain for development purposes using Ganache. 
-                        Web3 js: I know how to use Web3 js to get information from the Blockchain and use inside the app.  
-                        </p>
-                    </div>
-                </div>      
-            </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: CSS</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              CSS has taught me two important layout techniques: Flexbox and CSS
+              Grid. I have learned much more but the layout techniques is what I
+              find valuable.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Javascript</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              The most important thing JS has taught me is to reuse code, how to
+              make the wesite interactive, and much much more...
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Bootstrap</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              I have hands on experience with both regular Bootstrap and
+              Bootstrap for React. This has sped up the styling aspect of my
+              projects so much.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: React Js</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              React is amazing. I recommend this as a library to any new web
+              developer. I have hands on experience in both Class and Hook based
+              Life Cycle Projects.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Chakra UI</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              I can build user interfaces using chakra ui
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: React-Redux</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Redux is amazing. I like the fact that you can bypass the prop
+              system with Redux. Which means you can have both Global and
+              Component level state without passing global state through props.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Node JS</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about_extra">
+            <p class="grid-card-middle-about__text">
+              I have been working in a fullstack dev role since Feb 2022 and
+              node js has been my primary backend language. I use it with
+              express. Once the backend is set up, I will convert each route to
+              a lambda function.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Mongo db and Postgres</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              I can persist data to either data base. I can also retrieve data
+              to build dynamic user interfaces.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Postman</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Probably one of my favorite ways to test routes before diving into
+              the code. If a response returned as null postman would be my go to
+              for debugging.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Github, Git, Bash</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Skills obtained here: Linux commands to create files, folders,
+              change directory etc. I can push, pull, merge, set up automatic
+              deployments with gh actions
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Heroku and Netlify</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              I can deploy to these application hosting providers. I can also
+              set up automatic deployments on code push via both platforms
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Blockchain technologies I</p>
+            <p class="skill-item-level">Proficiency Level: Strong Knowledge</p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Solidity: I can read smart contracts written in Soldity. Truffle:
+              I can write basic tests in Mocha and Chai using the truffle test
+              suite.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Blockchain technologies II</p>
+            <p class="skill-item-level">Proficiency Level: Strong Knowledge</p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Ganache: I can set up a local blockchain for development purposes
+              using Ganache. Web3 js: I know how to use Web3 js to get
+              information from the Blockchain and use inside the app.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: Blockchain technologies III</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Ethers js: I can build a backend and ui that allows for the user
+              to send eth, get transaction history, wallet balance and much more
+              by using ethers.js
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: AWS technologies I</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Aws Cognito: I can create user pools and integrate authentication
+              checks either using Amplify or AWS SDK. Aws S3: I can store,
+              retrieve and delete items in an s3 bucket via aws sdk
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: AWS technologies II</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Aws API Gateway: I can set the route to trigger a lambda function.
+              Aws Lambda: I can covert node js express code to a lambda function
+              using the serverless framework.
+            </p>
+          </div>
+        </div>
+        <div class="grid-item-about">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Skill: AWS technologies II</p>
+            <p class="skill-item-level">
+              Proficiency Level: Hands on experience
+            </p>
+          </div>
+          <div class="grid-card-middle-about">
+            <p class="grid-card-middle-about__text">
+              Aws Cloudwatch: I can use cloudWatch to debug Lambda function
+              failures
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Projects Section -->
     <section id="projects">
-        <div class="projects__heading-container">
-            <h1 class="projects__heading">My Projects</h1>
+      <div class="projects__heading-container">
+        <h1 class="projects__heading">My Projects</h1>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/1.CYF-HTML-CSS-Project.jpg"
+              alt="CYF Project"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              HTML and CSS Project built for Code Your Future Bootcamp.
+              Features: Mobile Responsive
+            </p>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://codepen.io/Khughes1991/pen/zYENEeY"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
         </div>
-        <div class="grid-container">
-            <div class="grid-item">
-                <div class="grid-card-top">
-                    <img class="grid-card-top__sizing" src="img/project-images/1.CYF-HTML-CSS-Project.jpg" alt="CYF Project" 
-                    >
-                </div>
-                <div class="grid-card-middle">
-                    <p class="grid-card-middle__text"
-                    >
-                        HTML and CSS Project built for Code Your Future Bootcamp. 
 
-                        Features: Mobile Responsive
-                    </p>
-                </div>
-                <div class="grid-card-bottom">
-                    <a 
-                        id="grid-card-bottom__href"
-                        target="_blank"
-                        href="https://codepen.io/Khughes1991/pen/zYENEeY" 
-                    >
-                        <button id="grid-card-bottom__btn">
-                            <p>
-                                Go to Project
-                            </p>
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-card-top">
-                    <img class="grid-card-top__sizing" src="img/project-images/2.FCC-Random-Quote-Machine-React.jpg" alt="Random Quote Machine" 
-                    >
-                </div>
-                <div class="grid-card-middle">
-                    <p class="grid-card-middle__text"
-                    >
-                        Free Code Camp Random Quote Machine Project built with React. Class system used for life cycle methods 
-                    </p>
-                </div>
-                <div class="grid-card-bottom">
-                    <a 
-                        id="grid-card-bottom__href"
-                        target="_blank"
-                        href="https://codepen.io/Khughes1991/pen/vYepNvq" 
-                    >
-                        <button id="grid-card-bottom__btn">
-                            <p>
-                                Go to Project
-                            </p>
-                        </button>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="grid-item">
-                <div class="grid-card-top">
-                    <img class="grid-card-top__sizing" src="img/project-images/3.FCC-Markdown-Converter-React.jpg" alt="Markdown Converter" 
-                    >
-                </div>
-                <div class="grid-card-middle">
-                    <p class="grid-card-middle__text"
-                    >
-                        Free Code Camp Markdown Converter Project built with React. Class system used for life cycle methods 
-                    </p>
-                </div>
-                <div class="grid-card-bottom">
-                    <a 
-                        id="grid-card-bottom__href"
-                        target="_blank"
-                        href="https://codepen.io/Khughes1991/pen/QWqaKdq" 
-                    >
-                        <button id="grid-card-bottom__btn">
-                            <p>
-                                Go to Project
-                            </p>
-                        </button>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="grid-item">
-                <div class="grid-card-top">
-                    <img class="grid-card-top__sizing" src="img/project-images/4.FCC-Drum-Machine-React.jpg" alt="Drum Machine" 
-                    >
-                </div>
-                <div class="grid-card-middle">
-                    <p class="grid-card-middle__text"
-                    >
-                        Free Code Camp Drum Machine Project built with React. Class system used for life cycle methods  
-                    </p>
-                </div>
-                <div class="grid-card-bottom">
-                    <a 
-                        id="grid-card-bottom__href"
-                        target="_blank"
-                        href="https://codepen.io/Khughes1991/pen/GRMyNPX" 
-                    >
-                        <button id="grid-card-bottom__btn">
-                            <p>
-                                Go to Project
-                            </p>
-                        </button>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="grid-item">
-                <div class="grid-card-top">
-                    <img class="grid-card-top__sizing" src="img/project-images/5.FCC-JS-Calculator-React.jpg" alt="JS Calculator" 
-                    >
-                </div>
-                <div class="grid-card-middle">
-                    <p class="grid-card-middle__text"
-                    >
-                        Free Code Camp JS Calculator Project built with React. Class system used for life cycle methods   
-                    </p>
-                </div>
-                <div class="grid-card-bottom">
-                    <a 
-                        id="grid-card-bottom__href"
-                        target="_blank"
-                        href="https://codepen.io/Khughes1991/pen/JjrMvzj" 
-                    >
-                        <button id="grid-card-bottom__btn">
-                            <p>
-                                Go to Project
-                            </p>
-                        </button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="grid-item">
-                <div class="grid-card-top">
-                    <img class="grid-card-top__sizing" src="img/project-images/6.FCC-Pomodoro-Clock-React.jpg" alt="Pomodoro Clock" 
-                    >
-                </div>
-                <div class="grid-card-middle">
-                    <p class="grid-card-middle__text"
-                    >
-                    Free Code Camp Pomodoro Clock Project built with React. Class system used for life cycle methods  
-                    </p>
-                </div>
-                <div class="grid-card-bottom">
-                    <a 
-                        id="grid-card-bottom__href"
-                        target="_blank"
-                        href="https://codepen.io/Khughes1991/pen/wvrpXdx" 
-                    >
-                        <button id="grid-card-bottom__btn">
-                            <p>
-                                Go to Project
-                            </p>
-                        </button>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="grid-item">
-                <div class="grid-card-top">
-                    <img class="grid-card-top__sizing" src="img/project-images/7.TechAdon-Todo-React-Hooks.jpg" alt="TechAdon Todo Project" 
-                    >
-                </div>
-                <div class="grid-card-middle">
-                    <p class="grid-card-middle__text"
-                    >
-                        Todo app built with React for TechAdon assessment
-
-                        Features: React Hooks, Persist Todos to local storage, Bootstrap 5. 
-                        
-                    </p>
-                    <a target="_blank" id="todo-repo-link" href="https://github.com/HughesSeanKyle/TechAdon-Todo">Github Repository</a>
-                </div>
-                <div class="grid-card-bottom">
-                    <a 
-                        id="grid-card-bottom__href"
-                        target="_blank"
-                        href="https://hughesseankyle.github.io/techAdon-deploy/" 
-                    >
-                        <button id="grid-card-bottom__btn">
-                            <p>
-                                Go to Project
-                            </p>
-                        </button>
-                    </a>
-                </div>
-            </div>
-
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/2.FCC-Random-Quote-Machine-React.jpg"
+              alt="Random Quote Machine"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Free Code Camp Random Quote Machine Project built with React.
+              Class system used for life cycle methods
+            </p>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://codepen.io/Khughes1991/pen/vYepNvq"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
         </div>
-    
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/3.FCC-Markdown-Converter-React.jpg"
+              alt="Markdown Converter"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Free Code Camp Markdown Converter Project built with React. Class
+              system used for life cycle methods
+            </p>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://codepen.io/Khughes1991/pen/QWqaKdq"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/4.FCC-Drum-Machine-React.jpg"
+              alt="Drum Machine"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Free Code Camp Drum Machine Project built with React. Class system
+              used for life cycle methods
+            </p>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://codepen.io/Khughes1991/pen/GRMyNPX"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/5.FCC-JS-Calculator-React.jpg"
+              alt="JS Calculator"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Free Code Camp JS Calculator Project built with React. Class
+              system used for life cycle methods
+            </p>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://codepen.io/Khughes1991/pen/JjrMvzj"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/6.FCC-Pomodoro-Clock-React.jpg"
+              alt="Pomodoro Clock"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Free Code Camp Pomodoro Clock Project built with React. Class
+              system used for life cycle methods
+            </p>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://codepen.io/Khughes1991/pen/wvrpXdx"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/7.TechAdon-Todo-React-Hooks.jpg"
+              alt="TechAdon Todo Project"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Todo app built with React for TechAdon assessment Features: React
+              Hooks, Persist Todos to local storage, Bootstrap 5.
+            </p>
+            <a
+              target="_blank"
+              id="todo-repo-link"
+              href="https://github.com/HughesSeanKyle/TechAdon-Todo"
+              >Github Repository</a
+            >
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://hughesseankyle.github.io/techAdon-deploy/"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/8.DecentraFund.jpg"
+              alt="DecentraFund MERN PROJECT"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              MERN Application Features: Fullstack MERN application. (Work In
+              progress)
+            </p>
+            <div class="grid-card-middle_links">
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/mern-frontend-deployment/tree/dev"
+                >Github Repository Client</a
+              >
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/mern-backend-deployment"
+                >Github Repository Server</a
+              >
+            </div>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://gleaming-swan-1a32a1.netlify.app"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/9.nft-whitelist.jpg"
+              alt="NFT Whitelist project"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Fullstack Dapp Features: Solidity and Hardhat - NFT Whitelist
+            </p>
+            <div class="grid-card-middle_links">
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/nft-whitelist-smart-contract"
+                >Github Repo Smart Contract</a
+              >
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/nft-whitelisting-dapp"
+                >Github Repo Client</a
+              >
+            </div>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://nft-whitelisting-dapp.vercel.app/"
+              
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/10.crypto-devs.svg"
+              alt="NFT Collection project"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Fullstack Dapp Features: Solidity and Hardhat - NFT Collection
+            </p>
+            <div class="grid-card-middle_links">
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/nft-collection-smart-contract"
+                >Github Repo Smart Contract</a
+              >
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/nft-collection-client"
+                >Github Repo Client</a
+              >
+            </div>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://nft-collection-client.vercel.app/"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/11.0.svg"
+              alt="NFT Collection project"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Fullstack Dapp Features: Solidity and Hardhat - ICO
+            </p>
+            <div class="grid-card-middle_links">
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/erc20-ico-nfts"
+                >Github Repo Smart Contract</a
+              >
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/erc20-nft-client"
+                >Github Repo Client</a
+              >
+            </div>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://erc20-nft-client.vercel.app/"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing-alt"
+              src="img/project-images/11.0.svg"
+              alt="NFT Collection project"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+              Fullstack Dapp Features: Solidity and Hardhat - NFT DAO
+            </p>
+            <div class="grid-card-middle_links">
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/dao-nft-contract"
+                >Github Repo Smart Contract</a
+              >
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/nft-dao-client"
+                >Github Repo Client</a
+              >
+            </div>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://nft-dao-client.vercel.app/"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/12.FE-mentors-flag-app.png"
+              alt="Flag app"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+             Frontent Challenge - Frontend Mentors
+            </p>
+            <div class="grid-card-middle_links">
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/FE-Mentors-Flag-app"
+                >Github Repo</a
+              >
+            </div>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://fe-mentors-flag-app.vercel.app/"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div class="grid-card-top">
+            <img
+              class="grid-card-top__sizing"
+              src="img/project-images/13.social-media-server-side.png"
+              alt="Flag app"
+            />
+          </div>
+          <div class="grid-card-middle">
+            <p class="grid-card-middle__text">
+             Server side - Social media app logic
+            </p>
+            <div class="grid-card-middle_links">
+              <a
+                target="_blank"
+                id="todo-repo-link"
+                href="https://github.com/HughesSeanKyle/mern-social-media"
+                >Github Repo</a
+              >
+            </div>
+          </div>
+          <div class="grid-card-bottom">
+            <a
+              id="grid-card-bottom__href"
+              target="_blank"
+              href="https://github.com/HughesSeanKyle/mern-social-media"
+            >
+              <button id="grid-card-bottom__btn">
+                <p>
+                  Go to Project
+                </p>
+              </button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Professional Experience -->
+    <section id="professional-experience">
+      <div class="professional-experience__heading-container">
+        <h1 class="contact__heading">Professional Experience</h1>
+      </div>
+      <div class="professional-experience_content-container">
+        <div class="grid-item-about-pe">
+          <div class="grid-card-top-about">
+            <p class="skill-item">Company: Techadon Technologies</p>
+            <p class="skill-item-level">Capacity: Junior Fullstack Developer</p>
+            <p class="skill-item-level">Start date: 14 February to 1 December 2022</p>
+          </div>
+          <p class="grid-card-middle-about__text">
+            My role at Techadon was multifaceted. On the client side I have implemented features such as Authentication using AWS cognito and Amplify. The main purpose of the application was to make use of decentralized technologies such as ethers.js and leverage the Ethereum blockchain to build a decentralized wallet solution. The core of the web app is wallet related. My duties would include implementing the basic functionalities of a wallet which is to send, receive , and view the balance. I was also tasked with building an admin dashboard to handle KYC submissions. The part I enjoyed most was implementing graphs using chart.js and apex charts libraries. The information for these graphs was pulled from data providers such as CoinGecko and various other providers. 
+          </p>
+          <p class="grid-card-middle-about__text">
+            On the server side, I was responsible for persisting user wallet creation, user sending, and user transactions. This was accomplished using PostGreSQL and the sequelize ORM. In addition, I was resposible for creating the KYC upload routes using express and node js and gathering market data. I also worked with implemeting logic that interacts with the Uniswap api and existing stable coin smart contracts such as USDT and DAI. 
+          </p>
+          <p>Reference: Leon Mwandiringa</p>
+          <a target="_blank" href="https://za.linkedin.com/in/leon-mwandiringa-1024b8114">LinkedIn</a>
+          <a target="_blank" href="https://leonmwandiringa.com/">Personal Website</a>
+          <a target="_blank" href="https://techadon.co/">Company Website</a>
+        </div>
+      </div>
     </section>
     <!-- Contact Section -->
     <section id="contact">
-        <div class="contact__heading-container">
-            <h1 class="contact__heading">My Deets</h1>
+      <div class="contact__heading-container">
+        <h1 class="contact__heading">My Deets</h1>
+      </div>
+      <div class="social-icons">
+        <div class="social-icons__container">
+          <a href="https://github.com/HughesSeanKyle" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+          href="https://www.freecodecamp.org/Kyle-Sean-Hughes"
+          target="_blank"
+          >
+          <i class="fab fa-free-code-camp"></i>
+          <p>FCC Certificates</p>
+        </a>
         </div>
-        <div class="social-icons">
-            <div class="social-icons__container">
-                <a href="https://github.com/HughesSeanKyle" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://twitter.com/1K_i_Lo1" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.freecodecamp.org/fcce9e28476-9075-4311-9991-9211321b89f5" target="_blank">
-                    <i class="fab fa-free-code-camp"></i>
-                    <p>FCC Certificates</p>
-                </a>
-            </div>
-        </div>
+      </div>
     </section>
     <footer>
-        <div class="contact__heading-container">
-            <a 
-                href="https://github.com/HughesSeanKyle/Portfolio-Site"
-                target="_blank"
-            >
-                
-                <h1 class="contact__heading">this.project.code()</h1>
-            </a>
-        </div>
+      <div class="contact__heading-container">
+        <h1 class="contact__heading">Thanks for stopping by :)</h1>
+      </div>
     </footer>
     <!-- Script -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
